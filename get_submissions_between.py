@@ -32,7 +32,7 @@ def submissions_pushshift_praw(reddit, subreddit, start=None, end=None, limit=10
 
     # Format our search link properly.
     search_link = ('https://api.pushshift.io/reddit/submission/search/'
-                   '?subreddit={}&after={}&before={}&sort_type=score&sort=asc&limit={}&q={}')
+                   '?subreddit={}&after={}&before={}&sort_type=created_utc&sort=asc&limit={}&q={}')
     search_link = search_link.format(subreddit, start, end, limit, extra_query)
 
     # Get the data from Pushshift as JSON.
